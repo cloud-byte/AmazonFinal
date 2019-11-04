@@ -47,7 +47,8 @@ public class AmazonHome {
 	public void clickLocation() {
 		driver.findElement(By.xpath("//*[@id=\"nav-global-location-slot\"]/span/a")).click();
 	}
-	public void clickHoliDeals() {
+	public void clickHoliDeals() throws InterruptedException {
+		Thread.sleep(10000);
 		driver.findElement(By.xpath("//a[@class='nav-imageHref']//img")).click();
 	}
 	public void clickDepartments() {
