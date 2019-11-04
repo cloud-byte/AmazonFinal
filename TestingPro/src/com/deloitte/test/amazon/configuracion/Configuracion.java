@@ -23,7 +23,8 @@ public class Configuracion {
 		
 		
 
-		String chromeDriverPath= "C:\\Users\\gcastanon\\Documents\\chromedriver.exe";
+		String path = System.getProperty("user.home");
+		String chromeDriverPath= path+"\\Documents\\chromedriver.exe";
 		System.setProperty("webdriver.chrome.driver", chromeDriverPath);
 		driver = new ChromeDriver();
 		
