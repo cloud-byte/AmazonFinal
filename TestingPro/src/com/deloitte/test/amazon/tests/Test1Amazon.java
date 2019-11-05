@@ -15,8 +15,7 @@ public class Test1Amazon {
 		JavascriptExecutor js = conf.getJs();
 		
 		
-		
-		amaft2.clickWoot(driver);
+	
 		
 		
 	}
