@@ -14,9 +14,8 @@ public class Test1Amazon {
 		WebDriver driver = conf.getDriver();
 		JavascriptExecutor js = conf.getJs();
 		
-		ama.clickCart(driver);
 		
-		amaft2.clickAmazonMusic(driver);
+	
 		
 		
 	}
