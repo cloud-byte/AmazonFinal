@@ -22,6 +22,7 @@ public class AmazonHome {
 	}
 	public void clickRegistry() {
 		driver.findElement(By.xpath("//a[contains(text(),'Registry')]")).click();
+		//YO
 	}
 	public void clickGift() {
 		driver.findElement(By.xpath("//a[contains(text(),'Gift Cards')]")).click();
