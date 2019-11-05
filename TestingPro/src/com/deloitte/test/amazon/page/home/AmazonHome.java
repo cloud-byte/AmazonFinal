@@ -5,61 +5,62 @@ import org.openqa.selenium.WebDriver;
 
 import com.deloitte.test.amazon.configuracion.Configuracion;
 public class AmazonHome {
-	Configuracion conf = new Configuracion();
+	/*Configuracion conf = new Configuracion();
 	WebDriver driver = conf.getDriver();
-	JavascriptExecutor js = conf.getJs();
-	public  void verMain() {
-		driver.get("https://www.amazon.com/");
-	}
-	public void clickLogo() {
+	JavascriptExecutor js = conf.getJs();*/
+	
+	//public  void verMain() {
+		
+	//}
+	public void clickLogo(WebDriver driver) {
 		driver.findElement(By.xpath("//span[@class='nav-sprite nav-logo-base']")).click();;
 	}
-	public void clicktodaydeals() {
+	public void clicktodaydeals(WebDriver driver) {
 		driver.findElement(By.xpath("//a[contains(text(),\"Today's Deals\")]")).click();
 	}
-	public void clickhelp() {
+	public void clickhelp(WebDriver driver) {
 		driver.findElement(By.xpath("//div[@id='nav-xshop']//a[contains(@class,'')][contains(text(),'Help')]")).click();
 	}
-	public void clickRegistry() {
+	public void clickRegistry(WebDriver driver) {
 		driver.findElement(By.xpath("//a[contains(text(),'Registry')]")).click();
 		//YO
 	}
-	public void clickGift() {
+	public void clickGift(WebDriver driver) {
 		driver.findElement(By.xpath("//a[contains(text(),'Gift Cards')]")).click();
 	}
-	public void clickSell() {
+	public void clickSell(WebDriver driver) {
 		driver.findElement(By.xpath("//div[@id='nav-xshop']//a[contains(@class,'')][contains(text(),'Sell')]")).click();
 	}
-	public void clickMyAmazon() {
+	public void clickMyAmazon(WebDriver driver) {
 		driver.findElement(By.xpath("//a[@id='nav-your-amazon']")).click();
 	}
-	public void clickSignIn() {
+	public void clickSignIn(WebDriver driver) {
 		driver.findElement(By.xpath("//*[@id=\"nav-link-accountList\"]")).click();
 	}
-	public void clickReturnOrders() {
+	public void clickReturnOrders(WebDriver driver) {
 		driver.findElement(By.xpath("//span[contains(text(),'Returns')]")).click();
 	}
-	public void clickCart() {
+	public void clickCart(WebDriver driver) {
 		driver.findElement(By.xpath("//span[@id='nav-cart-count']")).click();
 	}
-	public void clickMenuLeft() {
+	public void clickMenuLeft(WebDriver driver) {
 		driver.findElement(By.xpath("//i[@class='hm-icon nav-sprite']")).click();
 	}
-	public void clickLocation() {
+	public void clickLocation(WebDriver driver) {
 		driver.findElement(By.xpath("//*[@id=\"nav-global-location-slot\"]/span/a")).click();
 	}
-	public void clickHoliDeals() throws InterruptedException {
+	public void clickHoliDeals(WebDriver driver) throws InterruptedException {
 		Thread.sleep(10000);
 		driver.findElement(By.xpath("//a[@class='nav-imageHref']//img")).click();
 	}
-	public void clickDepartments() {
+	public void clickDepartments(WebDriver driver) {
 		driver.findElement(By.xpath("//select[@id='searchDropdownBox']")).click();
 	}
-	public void findBar() {
+	public void findBar(WebDriver driver) {
 		driver.findElement(By.xpath("//input[@id='twotabsearchtextbox']")).sendKeys("Tablet");
 		driver.findElement(By.xpath("//div[@class='nav-search-submit nav-sprite']//input[@class='nav-input']")).click();
 	}
-	public void clickLanguage() {
+	public void clickLanguage(WebDriver driver) {
 		driver.findElement(By.xpath("//*[@id=\"icp-nav-flyout\"]/span/span[1]/span")).click();
 	}
 }

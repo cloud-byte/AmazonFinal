@@ -27,7 +27,7 @@ public class Configuracion {
 		String chromeDriverPath= path+"\\Documents\\chromedriver.exe";
 		System.setProperty("webdriver.chrome.driver", chromeDriverPath);
 		driver = new ChromeDriver();
-		
+		driver.get("https://www.amazon.com/");
 		driver.manage().window().maximize();
 	    return driver;
 		

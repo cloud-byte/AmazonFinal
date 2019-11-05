@@ -3,14 +3,20 @@ import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 
 import com.deloitte.test.amazon.configuracion.Configuracion;
+import com.deloitte.test.amazon.page.home.AmazonFooter2;
 import com.deloitte.test.amazon.page.home.AmazonHome;
 public class Test1Amazon {
 	static AmazonHome ama = new AmazonHome();
+	static AmazonFooter2 amaft2 = new AmazonFooter2();
 	
 	public static void main (String [] args) throws InterruptedException {
-		ama.verMain();
+		Configuracion conf = new Configuracion();
+		WebDriver driver = conf.getDriver();
+		JavascriptExecutor js = conf.getJs();
 		
-		ama.clickHoliDeals();
+		ama.clickCart(driver);
+		
+		amaft2.clickAmazonMusic(driver);
 		
 		
 	}
