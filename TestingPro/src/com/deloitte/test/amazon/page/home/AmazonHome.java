@@ -63,3 +63,4 @@ public class AmazonHome {
 		driver.findElement(By.xpath("//*[@id=\"icp-nav-flyout\"]/span/span[1]/span")).click();
 	}
 }
+// update pushed RicA
