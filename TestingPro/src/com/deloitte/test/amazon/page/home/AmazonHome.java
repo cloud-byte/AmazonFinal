@@ -2,12 +2,14 @@ package com.deloitte.test.amazon.page.home;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
-public class AmazonHome {
+public class AmazonHome{
 	private WebDriver driver; 
 	
 	public AmazonHome(WebDriver driver) {
 		this.driver = driver;
 	}
+	
+
 	public void clickLogo() {
 		driver.findElement(By.xpath("//span[@class='nav-sprite nav-logo-base']")).click();;
 	}
