@@ -1,6 +1,2 @@
-*.jar
-*.log
-*.classpath
 /bin/
-
-
+*.jar
