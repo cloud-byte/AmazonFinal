@@ -1,27 +1,16 @@
 package com.deloitte.test.amazon.tests;
 import org.openqa.selenium.JavascriptExecutor;
-import org.openqa.selenium.WebDriver;
-
 import com.deloitte.test.amazon.configuracion.Configuracion;
-import com.deloitte.test.amazon.page.home.AmazonFooter2;
-import com.deloitte.test.amazon.page.home.AmazonHome;
-import com.deloitte.test.amazon.page.home.AmazonSearchResult;
+import com.deloitte.test.amazon.page.home.AmazonFooter;
+import java.util.logging.Logger;
 public class Test1Amazon {
-	static AmazonHome ama = new AmazonHome();
-	static AmazonFooter2 amaft2 = new AmazonFooter2();
-	static AmazonSearchResult amaR = new AmazonSearchResult();
-	
-	public static void main (String [] args) throws InterruptedException {
-		Configuracion conf = new Configuracion();
-		WebDriver driver = conf.getDriver();
-		JavascriptExecutor js = conf.getJs();
-		ama.findBar(driver);
-		amaR.clickDisplaySizeFilter(driver, 1);
-
-		
-	
-		
-		
+	//static AmazonHome ama = new AmazonHome(null);
+	private static final Logger LOGGER = Logger.getLogger(Logger.GLOBAL_LOGGER_NAME);
+	public static void main (String [] args) throws InterruptedException {		
+		Configuracion cnf = new Configuracion();
+		JavascriptExecutor js = cnf.getJs();
+		AmazonFooter amaHome = new AmazonFooter(cnf.getDriver());
+		amaHome.clickWebElement(2);
 	}
 
 }

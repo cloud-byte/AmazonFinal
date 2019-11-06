@@ -1,9 +1,23 @@
 package com.deloitte.test.amazon.page.home;
+import java.util.List;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
-
+import org.openqa.selenium.WebElement;
 public class AmazonSearchResult {
+	private WebDriver driver; 
+	public AmazonSearchResult(WebDriver driver) {
+		this.driver = driver;
+	}
+	public void clickWebElement(int noElement){
+		List<WebElement> myElements = driver.findElements(By.xpath("//a[@class='nav_a']"));
+		System.out.println(myElements.get(noElement).getText());
+        myElements.get(noElement).click();
+	}
+	
+	
+	
+	
 	public void clickElement(WebDriver driver, int indexElement) {
 		driver.findElement(By.xpath("//span[@class='celwidget slot=SEARCH_RESULTS template=SEARCH_RESULTS widgetId=search-results index="+indexElement+"']//img[@class='s-image']")).click();
 	}
