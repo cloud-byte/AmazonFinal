@@ -22,7 +22,7 @@ public class Test1Amazon {
 		AmazonSignIn amaSign = new AmazonSignIn(amaFt.getDriver());
 		AmazonSearchResult amaSearch = new AmazonSearchResult(amaFt.getDriver());
 		
-        LOGGER.log(Level.INFO, amaSearch.getDescription());
+       // LOGGER.log(Level.INFO, amaSearch.getDescription());
 		
 	}
 

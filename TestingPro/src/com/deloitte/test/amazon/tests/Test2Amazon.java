@@ -12,7 +12,6 @@ public class Test2Amazon {
 		Configuracion cnf = new Configuracion();
 		
 		AmazonHome amaHome = new AmazonHome(cnf.getDriver());
-		amaHome.loginUser();
 	}
 
 }

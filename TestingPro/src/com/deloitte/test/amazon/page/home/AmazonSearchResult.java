@@ -15,9 +15,6 @@ public class AmazonSearchResult {
         myElements.get(noElement).click();
 	}
 	
-	
-	
-	
 	public void clickElement(WebDriver driver, int indexElement) {
 		driver.findElement(By.xpath("//span[@class='celwidget slot=SEARCH_RESULTS template=SEARCH_RESULTS widgetId=search-results index="+indexElement+"']//img[@class='s-image']")).click();
 	}
@@ -67,6 +64,13 @@ public class AmazonSearchResult {
 		driver.findElement(By.xpath("//li[starts-with(@id,'p_n_availability')]["+indexElement+"]//i[@class='a-icon a-icon-checkbox']")).click();
 	}
 	public String  getDescription() {
-		return driver.findElement(By.xpath("//div[@id='productDescription_feature_div']//p")).getText();
+		String texto = "";
+		try { //no todos los articulos tienen el mismo id en el div de descripcion
+			texto = driver.findElement(By.xpath("//div[@id='productDescription_feature_div']//div[@id='productDescription_feature_div']")).getText();
+		} catch (Exception e) {
+			texto = driver.findElement(By.xpath("//div[@id='productDescription']")).getText();
+		}
+		return texto;
+
 	}	
 }
