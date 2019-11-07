@@ -3,6 +3,7 @@ import org.openqa.selenium.JavascriptExecutor;
 import com.deloitte.test.amazon.configuracion.Configuracion;
 import com.deloitte.test.amazon.page.home.AmazonFooter;
 import com.deloitte.test.amazon.page.home.AmazonHome;
+import com.deloitte.test.amazon.page.home.AmazonSignIn;
 
 import java.util.logging.Logger;
 public class Test1Amazon {
@@ -13,9 +14,20 @@ public class Test1Amazon {
 		System.out.println("Starting testcase 1");
 		Configuracion cnf = new Configuracion();
 		JavascriptExecutor js = cnf.getJs();
+
+		AmazonFooter amaFt = new AmazonFooter(cnf.getDriver());
+		AmazonHome amaHome = new AmazonHome(amaFt.getDriver());
+		AmazonSignIn amaSign = new AmazonSignIn(amaFt.getDriver());
 		
-		AmazonHome amaHome = new AmazonHome(cnf.getDriver());
-		amaHome.loginUser();
+		
+		amaHome.clickSignIn();
+		amaSign.InputEmail("proyecto.bk201@gmail.com");
+		amaSign.ClickContinue();
+		amaSign.InputPassword("proyecto.bk201");
+		amaSign.clickSubmit();
+		amaSign.ClickContinue();
+
+		
 	}
 
 }

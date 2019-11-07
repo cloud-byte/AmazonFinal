@@ -31,7 +31,7 @@ public class AmazonHome{
 		driver.findElement(By.xpath("//a[@id='nav-your-amazon']")).click();
 	}
 	public void clickSignIn() {
-		driver.findElement(By.xpath("//*[@id=\"nav-link-accountList\"]")).click();
+		driver.findElement(By.xpath("//span[contains(text(),'Hello, Sign in')]")).click();	
 	}
 	public void clickReturnOrders() {
 		driver.findElement(By.xpath("//span[contains(text(),'Returns')]")).click();
