@@ -8,14 +8,14 @@ import java.util.logging.Logger;
 public class Test1Amazon {
 	//static AmazonHome ama = new AmazonHome(null);
 	private static final Logger LOGGER = Logger.getLogger(Logger.GLOBAL_LOGGER_NAME);
-	public static void main (String [] args) throws InterruptedException {		
+	public static void main (String [] args) throws InterruptedException {	
+		
+		System.out.println("Starting testcase 1");
 		Configuracion cnf = new Configuracion();
 		JavascriptExecutor js = cnf.getJs();
-		AmazonFooter amaFt = new AmazonFooter(cnf.getDriver());
-		AmazonHome amaHome = new AmazonHome(amaFt.getDriver());
-		amaFt.clickWebElement(2);
-		amaHome.clickSignIn();
 		
+		AmazonHome amaHome = new AmazonHome(cnf.getDriver());
+		amaHome.loginUser();
 	}
 
 }
