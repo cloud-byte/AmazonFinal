@@ -12,13 +12,13 @@ public class AmazonSignIn{
 	public AmazonSignIn(WebDriver driver) {
 		this.driver = driver;
 	}
-	public void InputEmail(String email) {
+	public void inputEmail(String email) {
 		driver.findElement(By.xpath("//input[@id='ap_email']")).sendKeys(email);
 	}
-	public void ClickContinue() {
+	public void clickContinue() {
 		driver.findElement(By.xpath("//input[@id='continue']")).click();
 	}
-	public void InputPassword(String pass) {
+	public void inputPassword(String pass) {
 		driver.findElement(By.xpath("//input[@id='ap_password']")).sendKeys(pass);	
 	}
 	public void clickSubmit() {
@@ -31,7 +31,7 @@ public class AmazonSignIn{
 	public void clickCreateAccount() {
 		driver.findElement(By.xpath("//a[@id='createAccountSubmit']	")).click();
 	}
-	public void RegisterForm(int noElement,String Data)
+	public void registerForm(int noElement,String Data)
 	{
 		
 		//jerrys update

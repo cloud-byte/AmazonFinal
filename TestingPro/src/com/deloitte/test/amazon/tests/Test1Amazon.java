@@ -21,13 +21,13 @@ public class Test1Amazon {
 		
 		
 		amaHome.clickSignIn();
-		amaSign.InputEmail("proyecto.bk201@gmail.com");
-		amaSign.ClickContinue();
-		amaSign.InputPassword("proyecto.bk201");
+		amaSign.inputEmail("proyecto.bk201@gmail.com");
+		amaSign.clickContinue();
+		amaSign.inputPassword("proyecto.bk201");
 		amaSign.clickSubmit();
-		amaSign.ClickContinue();
+		amaSign.clickContinue();
 
-		
+	//JDEHFD
 	}
 
 }
