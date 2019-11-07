@@ -8,6 +8,7 @@ import org.openqa.selenium.WebElement;
 public class AmazonSignIn{
 	private WebDriver driver; 
 	
+	//
 	public AmazonSignIn(WebDriver driver) {
 		this.driver = driver;
 	}
@@ -27,6 +28,8 @@ public class AmazonSignIn{
 	}
 	public void RegisterForm(int noElement,String Data)
 	{
+		
+		//jerrys update
 		List<WebElement> myElements = driver.findElements(By.xpath("//input[@id]"));
 		System.out.println(myElements.get(noElement).getText());
 		
