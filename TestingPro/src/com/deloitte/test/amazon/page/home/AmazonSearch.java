@@ -13,6 +13,7 @@ public class AmazonSearch {
 	}
 	public void clickFilterCheckBox(int noElement)
 	{
+		//pul rikoest
 		List<WebElement> myElements = driver.findElements(By.xpath("//li[starts-with(@id,'p_')]//i[@class='a-icon a-icon-checkbox']"));
 		//li[starts-with(@id,'p_')]//i[@class='a-icon a-icon-checkbox']CHECKBOS
 		//li[starts-with(@id,'n/')]//a[@class='a-link-normal s-navigation-item'] DEPARTAMENTOS		
