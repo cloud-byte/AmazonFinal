@@ -4,7 +4,9 @@ import com.deloitte.test.amazon.configuracion.Configuracion;
 import com.deloitte.test.amazon.page.home.AmazonFooter;
 import com.deloitte.test.amazon.page.home.AmazonHome;
 import com.deloitte.test.amazon.page.home.AmazonSignIn;
+import com.deloitte.test.amazon.page.home.AmazonSearchResult;
 
+import java.util.logging.Level;
 import java.util.logging.Logger;
 public class Test1Amazon {
 	//static AmazonHome ama = new AmazonHome(null);
@@ -18,15 +20,9 @@ public class Test1Amazon {
 		AmazonFooter amaFt = new AmazonFooter(cnf.getDriver());
 		AmazonHome amaHome = new AmazonHome(amaFt.getDriver());
 		AmazonSignIn amaSign = new AmazonSignIn(amaFt.getDriver());
+		AmazonSearchResult amaSearch = new AmazonSearchResult(amaFt.getDriver());
 		
-		
-		amaHome.clickSignIn();
-		amaSign.InputEmail("proyecto.bk201@gmail.com");
-		amaSign.ClickContinue();
-		amaSign.InputPassword("proyecto.bk201");
-		amaSign.clickSubmit();
-		amaSign.ClickContinue();
-
+        LOGGER.log(Level.INFO, amaSearch.getDescription());
 		
 	}
 

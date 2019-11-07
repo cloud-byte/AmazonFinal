@@ -65,5 +65,8 @@ public class AmazonSearchResult {
 	}
 	public void clickAvailabilityFilter(WebDriver driver,int indexElement) {
 		driver.findElement(By.xpath("//li[starts-with(@id,'p_n_availability')]["+indexElement+"]//i[@class='a-icon a-icon-checkbox']")).click();
+	}
+	public String  getDescription() {
+		return driver.findElement(By.xpath("//div[@id='productDescription_feature_div']//p")).getText();
 	}	
 }
