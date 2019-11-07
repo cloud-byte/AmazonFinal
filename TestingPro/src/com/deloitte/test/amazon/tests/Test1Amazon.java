@@ -27,7 +27,7 @@ public class Test1Amazon {
 		amaSign.clickSubmit();
 		amaSign.clickContinue();
 
-	//JDEHFD
+	//JDEHFDfefe
 	}
 
 }
