@@ -64,13 +64,6 @@ public class AmazonSearchResult {
 		driver.findElement(By.xpath("//li[starts-with(@id,'p_n_availability')]["+indexElement+"]//i[@class='a-icon a-icon-checkbox']")).click();
 	}
 	public String  getDescription() {
-		String texto = "";
-		try { //no todos los articulos tienen el mismo id en el div de descripcion
-			texto = driver.findElement(By.xpath("//div[@id='productDescription_feature_div']//div[@id='productDescription_feature_div']")).getText();
-		} catch (Exception e) {
-			texto = driver.findElement(By.xpath("//div[@id='productDescription']")).getText();
-		}
-		return texto;
-
+			return  driver.findElement(By.xpath("//div[@id='productDescription_feature_div']//div[@id='productDescription_feature_div'] | //div[@id='productDescription']")).getText();
 	}	
 }

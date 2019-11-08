@@ -13,7 +13,7 @@ public class Test1Amazon {
 	private static final Logger LOGGER = Logger.getLogger(Logger.GLOBAL_LOGGER_NAME);
 	public static void main (String [] args) throws InterruptedException {	
 		
-		System.out.println("Starting testcase 1");
+		LOGGER.log(Level.INFO, "Starting testcase 1");
 		Configuracion cnf = new Configuracion();
 		JavascriptExecutor js = cnf.getJs();
 
