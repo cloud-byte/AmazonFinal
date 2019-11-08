@@ -20,9 +20,16 @@ public class Test1Amazon {
 		AmazonFooter amaFt = new AmazonFooter(cnf.getDriver());
 		AmazonHome amaHome = new AmazonHome(amaFt.getDriver());
 		AmazonSignIn amaSign = new AmazonSignIn(amaFt.getDriver());
-		AmazonSearchResult amaSearch = new AmazonSearchResult(amaFt.getDriver());
+
+		amaHome.clickSignIn();
+		amaSign.inputEmail();
+		amaSign.clickContinue();
+		amaSign.inputPassword();
+		amaSign.clickSubmit();
+		amaSign.clickContinue();
+		Thread.sleep(15000);
+		amaSign.clickLog();
 		
-       // LOGGER.log(Level.INFO, amaSearch.getDescription());
 		
 	}
 
