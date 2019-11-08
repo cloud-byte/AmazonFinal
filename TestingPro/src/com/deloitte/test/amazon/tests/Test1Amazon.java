@@ -18,15 +18,15 @@ public class Test1Amazon {
 		AmazonFooter amaFt = new AmazonFooter(cnf.getDriver());
 		AmazonHome amaHome = new AmazonHome(amaFt.getDriver());
 		AmazonSignIn amaSign = new AmazonSignIn(amaFt.getDriver());
-		
-		
 		amaHome.clickSignIn();
-		amaSign.InputEmail("proyecto.bk201@gmail.com");
-		amaSign.ClickContinue();
-		amaSign.InputPassword("proyecto.bk201");
+		amaSign.inputEmail();
+		amaSign.clickContinue();
+		amaSign.inputPassword();
 		amaSign.clickSubmit();
-		amaSign.ClickContinue();
-
+		amaSign.clickContinue();
+		Thread.sleep(15000);
+		amaSign.clickLog();
+		
 		
 	}
 
