@@ -37,7 +37,6 @@ public class AmazonSignIn{
 		driver.findElement(By.xpath("//input[@id='continue']")).click();
 	}
 	public void getFail() {
-		//System.out.println(a); Cambio
 		LOGGER.log(Level.INFO,driver.findElement(By.xpath("//div[@id='auth-error-message-box']//div[@class='a-box-inner a-alert-container']")).getText());
 	}
 	public void clickCreateAccount() {
@@ -49,7 +48,6 @@ public class AmazonSignIn{
 	
 	public void registerForm()
 	{
-		 //jerrys update
 		List<WebElement> myElements = driver.findElements(By.xpath("//input[@id]"));
 		
 		myElements.get(0).sendKeys("Gerardo");

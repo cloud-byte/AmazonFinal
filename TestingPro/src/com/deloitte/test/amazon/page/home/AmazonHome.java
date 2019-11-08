@@ -8,6 +8,9 @@ public class AmazonHome{
 	public AmazonHome(WebDriver driver) {
 		this.driver = driver;
 	}
+	public WebDriver getDriver() {
+		return driver;
+	}
 	public void clickLogo() {
 		driver.findElement(By.xpath("//span[@class='nav-sprite nav-logo-base']")).click();;
 	}
@@ -60,4 +63,3 @@ public class AmazonHome{
 		driver.findElement(By.xpath("//*[@id=\"icp-nav-flyout\"]/span/span[1]/span")).click();
 	}
 }
-// update pushed RicA
