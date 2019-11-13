@@ -1,5 +1,7 @@
 package com.deloitte.test.amazon.tests;
 import org.openqa.selenium.JavascriptExecutor;
+import org.openqa.selenium.WebDriver;
+
 import com.deloitte.test.amazon.configuracion.Configuracion;
 import com.deloitte.test.amazon.page.home.AmazonFooter;
 import com.deloitte.test.amazon.page.home.AmazonHome;
@@ -14,11 +16,12 @@ public class Test1Amazon {
 		
 		LOGGER.log(Level.INFO, "Starting testcase 1");
 		Configuracion cnf = new Configuracion();
-		JavascriptExecutor js = cnf.getJs();
+		//JavascriptExecutor js = cnf.getJs();
+		WebDriver driver=cnf.getDriver();
 
-		AmazonHome amaHome = new AmazonHome(cnf.getDriver());
-		AmazonSearchResult amaSearch = new AmazonSearchResult(amaHome.getDriver());
-		AmazonSignIn amaSign = new AmazonSignIn(amaSearch.getDriver());
+		AmazonHome amaHome = new AmazonHome(driver);
+		AmazonSearchResult amaSearch = new AmazonSearchResult(driver);
+		AmazonSignIn amaSign = new AmazonSignIn(driver);
 	
 		//step 1: Click logIn button
 		amaHome.clickSignIn();
