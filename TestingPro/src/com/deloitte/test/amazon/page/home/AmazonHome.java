@@ -34,7 +34,8 @@ public class AmazonHome{
 		driver.findElement(By.xpath("//a[@id='nav-your-amazon']")).click();
 	}
 	public void clickSignIn() {
-		driver.findElement(By.xpath("//div[@id='nav-signin-tooltip']//span[@class='nav-action-inner'][contains(text(),'Sign in')]")).click();	
+		driver.findElement(By.xpath("//span[contains(text(),'Hello, Sign in')]")).click();	
+		driver.findElement(By.xpath("//div[@id='nav-flyout-ya-signin']//span[@class='nav-action-inner'][contains(text(),'Sign in')]")).click();	
 	}
 	public void clickReturnOrders() {
 		driver.findElement(By.xpath("//span[contains(text(),'Returns')]")).click();

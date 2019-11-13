@@ -14,8 +14,8 @@ public class AmazonSearchResult {
 	public AmazonSearchResult(WebDriver driver){
 		this.driver = driver;
 	}
-	public WebElement getDriver() {
-		return (WebElement) driver;
+	public WebDriver getDriver() {
+		return (WebDriver) driver;
 	}
 	public void clickWebElement(int noElement){
 		List<WebElement> myElements = driver.findElements(By.xpath("//a[@class='nav_a']"));
@@ -26,7 +26,7 @@ public class AmazonSearchResult {
 		driver.findElement(By.xpath("//span[@class='celwidget slot=SEARCH_RESULTS template=SEARCH_RESULTS widgetId=search-results index="+indexElement+"']//img[@class='s-image']")).click();
 	}
 	public void clickBrandFilter(int indexElement) {
-		driver.findElement(By.xpath("//li[starts-with(@id,'p_89')]["+indexElement+"]//i[@class='a-icon a-icon-checkbox']")).click();
+		driver.findElement(By.xpath("//div[@id='brandsRefinements']//li[@class='a-spacing-micro']//i["+indexElement+"]")).click();
 	}
 	public void clickPriceFilter(int indexElement) {
 		driver.findElement(By.xpath("//li[starts-with(@id,'p_36')]["+indexElement+"]//a[@class='a-link-normal s-navigation-item']")).click();

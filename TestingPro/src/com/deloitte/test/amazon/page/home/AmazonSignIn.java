@@ -14,21 +14,26 @@ public class AmazonSignIn{
 	@FindBy(
 			xpath="//input[@id='ap_email']"
 			)
+	
 	private WebElement emailInput;
+	
 	@FindBy(
 			xpath="//input[@id='ap_password']"
 			)
+	
 	private WebElement passwordInput;
 	public AmazonSignIn(WebDriver driver) {
 		this.driver = driver;
 	}
+	
 	public void inputEmail() {
-//		driver.findElement(By.xpath("//input[@id='ap_email']")).sendKeys("proyecto.bk201@gmail.com");
-		emailInput.sendKeys("proyecto.bk201@gmail.com");
+		driver.findElement(By.xpath("//input[@id='ap_email']")).sendKeys("proyecto.bk201@gmail.com");
+//		emailInput.sendKeys("proyecto.bk201@gmail.com");
 	}
+	
 	public void inputPassword() {
-//		driver.findElement(By.xpath("//input[@id='ap_password']")).sendKeys("proyecto.bk201");	
-		passwordInput.sendKeys("proyecto.bk201");
+		driver.findElement(By.xpath("//input[@id='ap_password']")).sendKeys("proyecto.bk201");	
+//		passwordInput.sendKeys("proyecto.bk201");
 	}
 	public void clickSubmit() {
 		driver.findElement(By.xpath("//input[@id='signInSubmit']")).click();

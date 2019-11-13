@@ -18,9 +18,42 @@ public class Test1Amazon {
 
 		AmazonHome amaHome = new AmazonHome(cnf.getDriver());
 		AmazonSearchResult amaSearch = new AmazonSearchResult(amaHome.getDriver());
+		AmazonSignIn amaSign = new AmazonSignIn(amaSearch.getDriver());
+	
+		//step 1: Click logIn button
+		amaHome.clickSignIn();
 		
+		//step 2: Fill email field
+		amaSign.inputEmail();
+		
+		//step 3: Click on continue
+		amaSign.clickContinue();
+		
+		//step 4: Fill valid password for the email
+		amaSign.inputPassword();
+		
+		//step 5: Click on submit
+		amaSign.clickSubmit();
+		
+		//step 6: Click on accept OTP
+		amaSign.clickContinue();
+		
+		//step 7: Wait for OTP code (manually)
+		Thread.sleep(20000);
+		
+		//step 8: Click accept
+		amaSign.clickLog(); 
+		
+		//step 9: Write "htc-vive" and click on search
 		amaHome.findBar("htc-vive");
+		
+		//step 10: Filter results by brand "HTC" 
+		amaSearch.clickBrandFilter(1);
+		
+		//step 11: Click fourth product 
 		amaSearch.clickElement(4);
+		
+		//step 12: Get product description in console 
 		LOGGER.log(Level.INFO, amaSearch.getDescription());
 		LOGGER.log(Level.INFO, "Testcase 1 finished");
 		
