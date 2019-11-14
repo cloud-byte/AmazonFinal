@@ -22,11 +22,32 @@ public class AmazonSearchResult {
 		LOGGER.log(Level.INFO, (myElements.get(noElement).getText()));
         myElements.get(noElement).click();
 	}
-	public void clickElement( int indexElement) {
-		driver.findElement(By.xpath("//span[@class='celwidget slot=SEARCH_RESULTS template=SEARCH_RESULTS widgetId=search-results index="+indexElement+"']//img[@class='s-image']")).click();
+	public void clickElementOne() {
+		driver.findElement(By.xpath("//span[@class='celwidget slot=SEARCH_RESULTS template=SEARCH_RESULTS widgetId=search-results index=0']//img[@class='s-image']")).click();
+	}
+	public void clickElementTwo() {
+		driver.findElement(By.xpath("//span[@class='celwidget slot=SEARCH_RESULTS template=SEARCH_RESULTS widgetId=search-results index=1']//img[@class='s-image']")).click();
+	}
+	public void clickElementThree() {
+		driver.findElement(By.xpath("//span[@class='celwidget slot=SEARCH_RESULTS template=SEARCH_RESULTS widgetId=search-results index=2']//img[@class='s-image']")).click();
+	}
+	public void clickElementFour() {
+		driver.findElement(By.xpath("//span[@class='celwidget slot=SEARCH_RESULTS template=SEARCH_RESULTS widgetId=search-results index=3']//img[@class='s-image']")).click();
 	}
 	public void clickBrandFilter(int indexElement) {
 		driver.findElement(By.xpath("//div[@id='brandsRefinements']//li[@class='a-spacing-micro']//i["+indexElement+"]")).click();
+	}
+	public void clickBrandFilterHtc() {
+		driver.findElement(By.xpath("//div[@id='brandsRefinements']//li[@class='a-spacing-micro']//i[1]")).click();
+	}
+	public void clickBrandFilterHyper() {
+		driver.findElement(By.xpath("//div[@id='brandsRefinements']//li[@class='a-spacing-micro']//i[3]")).click();
+	}
+	public void clickBrandFilterOculus() {
+		driver.findElement(By.xpath("//div[@id='brandsRefinements']//li[@class='a-spacing-micro']//i[2]")).click();
+	}
+	public void clickBrandFilterFovitec() {
+		driver.findElement(By.xpath("//div[@id='brandsRefinements']//li[@class='a-spacing-micro']//i[4]")).click();
 	}
 	public void clickPriceFilter(int indexElement) {
 		driver.findElement(By.xpath("//li[starts-with(@id,'p_36')]["+indexElement+"]//a[@class='a-link-normal s-navigation-item']")).click();

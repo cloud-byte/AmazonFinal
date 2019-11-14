@@ -4,7 +4,7 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 public class AmazonHome{
 	private WebDriver driver; 
-	//hlksadkjlakdsa
+
 	public AmazonHome(WebDriver driver) {
 		this.driver = driver;
 	}
@@ -56,8 +56,12 @@ public class AmazonHome{
 	public void clickDepartments() {
 		driver.findElement(By.xpath("//select[@id='searchDropdownBox']")).click();
 	}
-	public void findBar(String searchText) {
-		driver.findElement(By.xpath("//input[@id='twotabsearchtextbox']")).sendKeys(searchText);
+	public void findBarHtcVive() {
+		driver.findElement(By.xpath("//input[@id='twotabsearchtextbox']")).sendKeys("htc-vive");
+		driver.findElement(By.xpath("//div[@class='nav-search-submit nav-sprite']//input[@class='nav-input']")).click();
+	}
+	public void findBarTablet() {
+		driver.findElement(By.xpath("//input[@id='twotabsearchtextbox']")).sendKeys("tablet");
 		driver.findElement(By.xpath("//div[@class='nav-search-submit nav-sprite']//input[@class='nav-input']")).click();
 	}
 	public void clickLanguage() {

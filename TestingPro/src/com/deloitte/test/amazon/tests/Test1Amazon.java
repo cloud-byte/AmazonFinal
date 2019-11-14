@@ -48,13 +48,13 @@ public class Test1Amazon {
 		amaSign.clickLog(); 
 		
 		//step 9: Write "htc-vive" and click on search
-		amaHome.findBar("htc-vive");
+		amaHome.findBarHtcVive();
 		
 		//step 10: Filter results by brand "HTC" 
-		amaSearch.clickBrandFilter(1);
+		amaSearch.clickBrandFilterHtc();
 		
 		//step 11: Click fourth product 
-		amaSearch.clickElement(4);
+		amaSearch.clickElementFour();
 		
 		//step 12: Get product description in console 
 		LOGGER.log(Level.INFO, amaSearch.getDescription());
